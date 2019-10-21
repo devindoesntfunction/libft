@@ -1,6 +1,6 @@
 ALL = libft.a
 
-SRCS = $(wildcard ft_math/*.c)
+SRCS = $(wildcard ft_*/*.c)
 
 OBJS = $(SRCS:.c=.o)
 
