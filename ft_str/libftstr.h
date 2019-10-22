@@ -5,5 +5,7 @@
 # include <stdlib.h>
 
 size_t	ft_strlen(char *str);
+char	*ft_strdup(char *str);
+char	*ft_strnew(size_t n);
 
 #endif
