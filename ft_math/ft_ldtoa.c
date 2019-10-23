@@ -21,11 +21,19 @@ char		*ft_ldtoa(long double f, int p)
 {
 	char *nat;
 	char *frac;
+	size_t	i;
 	long double m;
 
 	if (f != f || f == f * 2 || f < 0)
 		return (catch(f, p));
-	m = (long double)(floor_log_ten(f));
-	nat = ft_strnew((int)m);
-	m = ft_exponentiate(10, (int)m);
+	i = floor_log_ten(f);
+	nat = ft_strnew(i);
+	m = ft_exponentiate(10, (i));
+	i = 0;
+	while (m >= 1)
+	{
+		nat[i++] = (char)(f / m) + '0';
+		f -= m * (int)(f / m);
+		m /= 10.0;
+	}
 }
