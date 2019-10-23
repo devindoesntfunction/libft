@@ -1,5 +1,16 @@
 #ifndef LIBFTMATH_H
 # define LIBFTMATH_H
+# include <strings.h>
+
+typedef char		t_byte;
+enum 			sign			{positive, negative};
+
+typedef struct		s_vlq
+{
+	size_t		len;
+	enum sign	sign;
+	t_byte		*ptr;
+}			t_vlq;
 
 int			floor_log_two		(long double d);
 long double		ft_power_two		(int power);
