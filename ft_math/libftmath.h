@@ -1,9 +1,10 @@
 #ifndef LIBFTMATH_H
 # define LIBFTMATH_H
 # include <strings.h>
+# include <limits.h>
 
 typedef char		t_byte;
-enum 			sign			{positive, negative};
+enum 			sign			{positive = 1, negative = -1};
 
 typedef struct		s_vlq
 {
@@ -19,5 +20,8 @@ char			*ft_ftoa		(double f, int p);
 int			floor_log_ten		(long double d);
 long double		ft_ldexponentiate	(long double b, unsigned int x);
 char			*ft_stradd		(char *a, char *b);
+t_vlq			ft_itovlq		(int x);
+int			ft_vlqtoi		(t_vlq x);
+void			ft_vlqfree		(t_vlq *x);
 
 #endif
