@@ -23,5 +23,7 @@ char			*ft_stradd		(char *a, char *b);
 t_vlq			ft_itovlq		(int x);
 int			ft_vlqtoi		(t_vlq x);
 void			ft_vlqfree		(t_vlq *x);
+t_vlq			ft_vlqadd		(t_vlq a, t_vlq b);
+t_vlq			ft_vlqsubtract		(t_vlq a, t_vlq b);
 
 #endif
