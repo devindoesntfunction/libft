@@ -57,12 +57,13 @@ static t_vlq	subtract(t_vlq a, t_vlq b)
 	return (ret);
 }
 
-t_lvq	ft_vlqsubtract(t_vlq a, t_vlq b)
+t_vlq	ft_vlqsubtract(t_vlq a, t_vlq b)
 {
+	t_vlq	ret;
 	if (a.sign != b.sign)
 	{
 		b.sign *= -1;
-		return(ft_vlqadd(a, b);
+		return(ft_vlqadd(a, b));
 	}
 	if (ft_vlqabscmp(a, b) == 0)
 		return (ft_itovlq(0));
